@@ -3,37 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rock Paper Scissors Game</title>
+    <title>RPS Pro</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Rock Paper Scissors</h1>
-    <div class="choices">
-      <div class="choice" id="rock">
-        <img src="./images/rock.png" />
+    <div class="app-container">
+      <h1>Rock Paper Scissors</h1>
+
+      <div class="scoreboard">
+        <div class="score-box user">
+          <span class="score-label">You</span>
+          <span id="user-score" class="score-val">0</span>
+        </div>
+        <div class="score-box comp">
+          <span class="score-label">Comp</span>
+          <span id="comp-score" class="score-val">0</span>
+        </div>
       </div>
-      <div class="choice" id="paper">
-        <img src="./images/paper.png" />
+
+      <!-- The Battle Arena: Shows the current matchup -->
+      <div class="battle-arena">
+        <div class="fighter" id="user-fighter">
+          <div class="placeholder">?</div>
+          <!-- Default image path updated -->
+          <img src="images/rock.png" alt="User" class="fighter-img hide" id="user-img">
+        </div>
+        <div class="vs-text">VS</div>
+        <div class="fighter" id="comp-fighter">
+          <div class="placeholder">?</div>
+          <!-- Default image path updated -->
+          <img src="images/rock.png" alt="Comp" class="fighter-img hide" id="comp-img">
+        </div>
       </div>
-      <div class="choice" id="scissors">
-        <img src="./images/scissors.png" />
+
+      <div class="msg-container">
+        <p id="msg">Choose your weapon!</p>
       </div>
+
+      <div class="choices">
+        <div class="choice" id="rock">
+          <img src="./images/rock.png" alt="rock" />
+        </div>
+        <div class="choice" id="paper">
+          <img src="./images/paper.png" alt="paper" />
+        </div>
+        <div class="choice" id="scissors">
+          <img src="./images/scissors.png" alt="scissors" />
+        </div>
+      </div>
+
+      <button id="reset-btn" class="action-btn">Reset Score</button>
     </div>
 
-    <div class="score-board">
-      <div class="score">
-        <p id="user-score">0</p>
-        <p>You</p>
-      </div>
-      <div class="score">
-        <p id="comp-score">0</p>
-        <p>Comp</p>
-      </div>
-    </div>
-
-    <div class="msg-container">
-      <p id="msg">Play your move</p>
-    </div>
     <script src="app.js"></script>
   </body>
 </html>
